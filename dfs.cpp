@@ -1,3 +1,6 @@
+
+// https://www.hackerrank.com/challenges/pacman-dfs
+
 #include <iostream>
 #include <vector>
 #include <stack>
@@ -84,17 +87,20 @@ void dfs(int r, int c, int pacman_r, int pacman_c, int food_r, int food_c, vecto
     }
     
     vector<tuple<int, int>>::iterator it;
-    cout << explored.size() << endl;
+    
+    cout << visited.size() << endl;
+    for(it = visited.begin(); it != visited.end(); it++){
+        tie(v_r, v_c) = *it;
+        cout << v_r << " " << v_c << endl;
+    }
+    
+    cout << explored.size() - 1 << endl;
     for(it = explored.begin(); it != explored.end(); it++){
         tie(v_r, v_c) = *it;
         cout << v_r << " " << v_c << endl;
     }
         
-    cout << visited.size() - 1 << endl;
-    for(it = visited.begin(); it != visited.end(); it++){
-        tie(v_r, v_c) = *it;
-        cout << v_r << " " << v_c << endl;
-    }
+
 }
 
 int main(void) {
