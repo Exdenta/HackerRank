@@ -5,6 +5,9 @@
 #include <list>
 #include <stack>
 
+// Сгенерировать все возможные правильные последовательности длины N.
+// Например, последовательности «(())()», «()» и «(()(()))» — правильные, 
+// в то время как «)(», «(()» и «(()))(» — нет.
 
 using namespace std;
 
@@ -13,10 +16,10 @@ class Sequence
 public:
     std::string result_;
 
-    // N - zeros left to add
+    // N - '(' left to add
     int n_;
 
-    // M - ones left to add
+    // M - ')' left to add
     int m_;
 
     Sequence(int n, int m) : result_(""), n_(n), m_(m) {}
@@ -80,16 +83,7 @@ void generateSequences(int num)
 
 int main()
 {
-    int len;
-    string line;
-    ifstream f("input.txt");
-    if (f.is_open())
-    {
-        getline(f, line);
-        len = stoi(line);
-        f.close();
-    }
-
+    int len = 5;
     generateSequences(len);
 
     return 0;
