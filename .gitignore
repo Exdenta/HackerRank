@@ -1,3 +1,6 @@
 bin/*
 vscode/*
 /.vscode
+/yandex/train.zip
+/yandex/test
+/yandex/train

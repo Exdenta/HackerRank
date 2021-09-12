@@ -26,3 +26,6 @@ two_sum_unordered_map:
 
 functions_pipeline:
 	$(CC) functions_pipeline.cpp -o bin/functions_pipeline
+
+trees_alg:
+	$(CC) -std=c++17 -g trees_alg.cpp -o bin/trees_alg
